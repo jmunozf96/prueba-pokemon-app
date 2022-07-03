@@ -1,10 +1,8 @@
 import {configureStore, ThunkAction, Action} from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
 import PokemonReducer from '../features/pokemon/ducks/pokemon.reducer';
 
 export const store = configureStore({
     reducer: {
-        counter: counterReducer,
         pokemon: PokemonReducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}),
